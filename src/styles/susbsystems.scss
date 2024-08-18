@@ -1,0 +1,86 @@
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.5vh;
+    font-size: 60px ;
+    margin-bottom: 2vh;
+}
+.card{
+   margin-left: 70px;
+   margin-bottom: 50px;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+}
+
+.main-container{
+
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap; 
+}
+
+.Subsys-Img{
+    
+    height: 30vh;
+    transition: all 0.4s ease-in-out;
+}
+.subsys_name{
+    z-index: 3;
+    font-size:2rem ;
+    font-weight: bold;
+    font-style: italic;
+    position: absolute;
+    text-align: center;
+    margin-bottom: 10px;
+
+    
+}
+.description{
+    display: none;
+    z-index: 3;
+    font-size: 9px;
+    text-wrap:wrap;
+    position: absolute;
+    margin-top: 80px;
+    padding: 1rem;
+    animation: anim-1 0.4s ease-in-out;
+    
+    
+
+    
+}
+.btn{
+    display: none;
+    position: absolute;
+    z-index: 3;
+    font-size: 10px;
+    margin-top: 150px;
+    
+    
+
+}
+
+
+@keyframes anim-1 {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+    
+
+.text_cont{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   
+    
+    
+}

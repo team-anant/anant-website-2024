@@ -10,6 +10,7 @@ import Alumni from "./pages/Alumni";
 // Styles
 import "./styles/global.scss";
 import Subsystems from "./pages/Subsystems";
+import Subsysteminfo from "./pages/Subsysteminfo";
 import Events from "./pages/Events";
 import Archives from "./pages/Archives";
 import Teams from "./pages/Teams";
@@ -22,6 +23,7 @@ export default function AnimationWrapper() {
       <Routes key={location.pathname} location={location}>
         <Route path="/" element={<Landing />} />
         <Route path="/subsystems" element={<Subsystems />} />
+        <Route path="/subsysteminfo" element={<Subsysteminfo />} />
         <Route path="/events" element={<Events />} />
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/alumni" element={<Alumni />} />
