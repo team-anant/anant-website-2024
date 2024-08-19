@@ -22,10 +22,12 @@
 
 1.
 
-````bash
-git clone https://github.com/team-anant/anant-website-2024.git```
+```bash
+git clone https://github.com/team-anant/anant-website-2024.git
+```
+
 2. Run
 
 ```bash
 npm run dev
-````
+```
