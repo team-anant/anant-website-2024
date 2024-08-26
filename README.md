@@ -4,12 +4,9 @@
 
 # Division
 
-1. **Shreyas** - Setup, Landing, Alumni
-2. **Aayush** - Subsystems
-3. **Arya** - Events,
-4. **Shashank**
-
-**Pages Left** - Archive, Team, Achievements
+1. **Shreyas** - Setup, Landing, Alumni, Admin
+2. **Aayush** - Subsystems, Achievements
+3. **Arya** - Events, Archive, Teams
 
 ---
 
