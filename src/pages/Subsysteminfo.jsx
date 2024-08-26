@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 import "../styles/susbsystems.scss";
 import btn from "../assets/Forward Button.png"
 
-const Subsysteminfo = (props) => {
+const Subsysteminfo = () => {
     const location = useLocation()
     const name = location.state.name;
     const object = location.state.object;

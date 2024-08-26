@@ -41,7 +41,7 @@ export default function SubsystemCard({ object, header, description }) {
               style={hover ? { display: "flex", textDecoration: "none" } : {}}
               className="btn"
             >
-              <Link to="/Subsysteminfo" state={data}>
+              <Link to={"/Subsystems/"+ header +""}>
                 Click Here to Know More...
               </Link>
             </div>
