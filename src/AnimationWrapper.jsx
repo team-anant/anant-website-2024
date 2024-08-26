@@ -14,6 +14,13 @@ import Subsysteminfo from "./pages/Subsysteminfo";
 import Events from "./pages/Events";
 import Archives from "./pages/Archives";
 import Teams from "./pages/Teams";
+import ADCS from "./pages/Subsystems/ADCS";
+import OBC from "./pages/Subsystems/OBC";
+import EPS from "./pages/Subsystems/EPS";
+import PSD from "./pages/Subsystems/PSD";
+import Payload from "./pages/Subsystems/Payload";
+import STS from "./pages/Subsystems/STS";
+import TTC from "./pages/Subsystems/TTC";
 import Achievements from "./pages/Achievements";
 import Login from "./pages/Login";
 import ProtectedRoutes from "./components/ProtectedRoutes";
@@ -27,6 +34,13 @@ export default function AnimationWrapper() {
         <Route path="/" element={<Landing />} />
         <Route path="/subsystems" element={<Subsystems />} />
         <Route path="/subsysteminfo" element={<Subsysteminfo />} />
+        <Route path="/Subsystems/PSD" element={<PSD />} />
+        <Route path="/Subsystems/TTC" element={<TTC />} />
+        <Route path="/Subsystems/ADCS" element={<ADCS />} />
+        <Route path="/Subsystems/EPS" element={<EPS />} />
+        <Route path="/Subsystems/STS" element={<STS />} />
+        <Route path="/Subsystems/Payload" element={<Payload />} />
+        <Route path="/Subsystems/OBC" element={<OBC />} />
         <Route path="/events" element={<Events />} />
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/alumni" element={<Alumni />} />
