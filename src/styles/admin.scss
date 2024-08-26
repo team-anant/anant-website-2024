@@ -1,0 +1,41 @@
+.verify-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    border: 0;
+    // background-color: transparent;
+    max-width: none;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #333;
+      margin: 0;
+    }
+
+    .signout-btn {
+      position: absolute;
+      right: 0;
+      margin-right: 20px;
+    }
+  }
+}
+.verify-table {
+  width: 95%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: 90%;
+}

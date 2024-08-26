@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -15,6 +15,9 @@ import Events from "./pages/Events";
 import Archives from "./pages/Archives";
 import Teams from "./pages/Teams";
 import Achievements from "./pages/Achievements";
+import Login from "./pages/Login";
+import ProtectedRoutes from "./components/ProtectedRoutes";
+import AdminPanel from "./pages/AdminPanel";
 
 export default function AnimationWrapper() {
   const location = useLocation();
@@ -29,6 +32,17 @@ export default function AnimationWrapper() {
         <Route path="/alumni" element={<Alumni />} />
         <Route path="/archives" element={<Archives />} />
         <Route path="/team" element={<Teams />} />
+        <Route path="/admin/login" element={<Login />} />
+        <Route
+          path="/admin/authorize"
+          element={
+            <ProtectedRoutes>
+              <AdminPanel />
+            </ProtectedRoutes>
+          }
+        />
+        <Route path="*" element={<Navigate to={"/"} />} />
+        <Route path="/admin/*" element={<Navigate to={"/admin/login"} />} />
       </Routes>
     </AnimatePresence>
   );
