@@ -21,7 +21,7 @@
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    border: transparent 2px solid;
+    border: rgba(206, 71, 255, 0.734) 2px solid;
     transition: all 0.3s ease;
 
     &:hover {
@@ -40,6 +40,63 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.alumni-list-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+
+  width: 100%;
+  height: fit-content;
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .alumni-card {
+    width: 300px;
+    height: 400px;
+    // background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    .alumni-details {
+      padding: 1rem;
+
+      h3,
+      a {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #4bc9ff;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        color: #e7e7e7;
+        margin-top: 0.5rem;
+      }
     }
   }
 }

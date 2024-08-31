@@ -1,7 +1,8 @@
-import { deleteDoc, doc, updateDoc } from "firebase/firestore";
-import { db } from "../firebase/firebase";
+import { deleteDoc, doc, getDoc, updateDoc } from "firebase/firestore";
+import { db, storage } from "../firebase/firebase";
 import React from "react";
 import { FirebaseError } from "firebase/app";
+import { deleteObject, ref } from "firebase/storage";
 
 export async function verifyUser(
   id: string,
@@ -61,10 +62,21 @@ export async function deleteUser(
   id: string,
   setUsers: React.Dispatch<React.SetStateAction<TUsersFirestore[]>>
 ) {
-  console.log(id);
   const userRef = doc(db, "formUsers", id);
   try {
+    // Delete the images from storage
+    const doc = await getDoc(userRef);
+    if (doc.exists()) {
+      if (doc.data().imageUrl !== null) {
+        const storageRef = ref(storage, `pictures/${id}`);
+        await deleteObject(storageRef);
+      }
+    }
+
+    // Delete user
     await deleteDoc(userRef);
+
+    // Local state update
     setUsers((prev) => {
       return prev.filter((user) => user.id !== id);
     });

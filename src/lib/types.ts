@@ -1,8 +1,9 @@
 type TUsersForm = {
   name: string;
   batch: string;
-  imageUrl: string | null;
+  linkedIn: string;
   contactNo: string;
+  imageUrl: string | null;
   email: string | null;
   subsystem: string | null;
   achievement: string | null;
@@ -11,12 +12,4 @@ type TUsersForm = {
 
 type TUsersFirestore = {
   id: string;
-  name: string;
-  batch: string;
-  imageUrl: string | null;
-  contactNo: string;
-  email: string | null;
-  subsystem: string;
-  achievement: string;
-  verified: boolean;
-};
+} & TUsersForm;

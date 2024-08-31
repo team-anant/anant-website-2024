@@ -1,9 +1,11 @@
 .verify-page {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 1rem;
   align-items: center;
   height: 100%;
+  min-height: 100dvh;
   width: 100%;
   background-color: #f5f5f5;
 
