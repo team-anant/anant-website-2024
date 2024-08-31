@@ -1,16 +1,20 @@
 import React, { useContext, useState, useEffect } from "react";
 // import { GoogleAuthProvider } from "firebase/auth";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, User } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 
-const AuthContext = React.createContext();
+const AuthContext = React.createContext<{
+  userLoggedIn: boolean;
+  currentUser: User | null;
+  setCurrentUser: React.Dispatch<React.SetStateAction<User | null>>;
+}>({ userLoggedIn: false, currentUser: null, setCurrentUser: () => {} });
 
 export function useAuth() {
   return useContext(AuthContext);
 }
 
-export function AuthProvider({ children }) {
-  const [currentUser, setCurrentUser] = useState(null);
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [userLoggedIn, setUserLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -19,7 +23,7 @@ export function AuthProvider({ children }) {
     return unsubscribe;
   }, []);
 
-  async function initializeUser(user) {
+  async function initializeUser(user: User | null) {
     if (user) {
       setCurrentUser({ ...user });
 

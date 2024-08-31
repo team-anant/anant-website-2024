@@ -14,8 +14,8 @@ import FormVerifyTable from "../components/FormVerifyTable";
 
 export default function AdminPanel() {
   const [loading, setLoading] = React.useState(true);
-  const [users, setUsers] = React.useState([]);
-  const { currentUser, setCurrentUser } = useAuth();
+  const [users, setUsers] = React.useState<TUsersFirestore[]>([]);
+  const { setCurrentUser } = useAuth();
   const navigate = useNavigate();
 
   React.useEffect(() => {
@@ -33,7 +33,7 @@ export default function AdminPanel() {
       }
 
       const usersList = usersSnapshot.docs.map((doc) => doc.data());
-      setUsers(usersList);
+      setUsers(usersList as unknown as TUsersFirestore[]);
       setLoading(false);
     };
 

@@ -1,0 +1,45 @@
+.alumni-section {
+  text-align: center;
+}
+
+.alumni-hero {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+
+  padding: 0 2rem;
+
+  button {
+    background: linear-gradient(90deg, #4bc9ff 41.94%, #cf47ff 99.99%);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: transparent 2px solid;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(90deg, #4bc9ff 41.94%, #cf47ff 99.99%);
+      border: #4bc9ff 2px solid;
+      transform: translateY(-5px);
+    }
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+
+    span {
+      background: linear-gradient(90deg, #4bc9ff 41.94%, #cf47ff 99.99%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
