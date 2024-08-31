@@ -7,7 +7,7 @@ import OBC_subsystem_logo from "../../assets/OBC-bg.png";
 
 import { motion } from "framer-motion";
 
-export default function Payload() {
+export default function OBC() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
