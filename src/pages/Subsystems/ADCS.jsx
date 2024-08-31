@@ -6,7 +6,7 @@ import ADCS_subsystem_logo from "../../assets/ADCS-bg.png";
 
 import { motion } from "framer-motion";
 
-export default function Payload() {
+export default function ADCS() {
   return (
     
     <motion.div

@@ -7,7 +7,7 @@ import TTC_subsystem_logo from "../../assets/TTC-bg.png";
 
 import { motion } from "framer-motion";
 
-export default function Payload() {
+export default function TTC() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
