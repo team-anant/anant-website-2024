@@ -14,7 +14,7 @@ export default function Layout({ children }) {
   }
 
   return (
-    <div style={{ paddingTop: "2rem", width: "100%", height: "100%" }}>
+    <div className="outer-div-overall">
       <Navbar />
       <main>{children}</main>
     </div>

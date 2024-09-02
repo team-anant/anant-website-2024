@@ -13,6 +13,9 @@ nav {
   max-width: 1280px;
   width: fit-content;
 
+  margin-top: 2rem;
+  z-index: 10000000;
+
   li {
     list-style: none;
     display: inline;
@@ -44,7 +47,7 @@ nav {
     }
   }
 
-  ul {
+  ul.desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,5 +63,130 @@ nav {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 968px) {
+    background-color: transparent;
+    border: none;
+    height: fit-content;
+
+    justify-content: end;
+    padding-right: 2rem;
+
+    width: 100%;
+
+    ul.desktop {
+      display: none;
+    }
+  }
+}
+
+.hamBurger {
+  display: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  @media screen and (max-width: 968px) {
+    display: block;
+    // position: absolute;
+    // top: 1rem;
+    // right: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+
+    div {
+      width: 35px;
+      height: 5px;
+      background-color: white;
+      margin: 6px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &.open {
+    div:nth-child(1) {
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    div:nth-child(2) {
+      opacity: 0;
+    }
+
+    div:nth-child(3) {
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+}
+
+nav > .mobile-nav {
+  display: none;
+
+  @media screen and (max-width: 968px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+
+    padding: 0.75rem 1.5rem;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: fit-content;
+    height: 90%;
+
+    border-radius: 30px;
+    border: 1px solid rgba(200, 200, 200, 0.2);
+    // border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+    background: rgba(165, 163, 163, 0.1);
+
+    transform: translateX(130%);
+    transition: all 0.3s ease;
+
+    li {
+      list-style: none;
+      display: inline;
+      margin: 0;
+      border-radius: 20px;
+      padding: 0.05rem 1rem;
+      border-width: 1px;
+      border-color: transparent;
+      border-style: solid;
+
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        background-color: rgba(111, 113, 117, 0.3);
+        border: 1px solid rgba(76, 78, 80, 0.9);
+
+        a {
+          color: rgba(217, 217, 217, 0.9);
+        }
+      }
+
+      &.active {
+        background-color: var(--primary-faded);
+        border: 1px solid var(--primary);
+
+        a {
+          color: var(--primary-faded-text);
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &.open {
+      transform: translateX(-10%);
+    }
   }
 }
