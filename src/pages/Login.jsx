@@ -28,8 +28,8 @@ export default function Login() {
 
   const handleSubmit = async (values) => {
     // e.preventDefault();
-    console.log("Form submitted");
-    console.log(values);
+    // console.log("Form submitted");
+    // console.log(values);
     // console.log(e.target.email.value);
     // console.log(e.target.password.value);
 
